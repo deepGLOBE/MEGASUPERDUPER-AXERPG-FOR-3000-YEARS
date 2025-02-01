@@ -111,8 +111,9 @@ class Spider(pygame.sprite.Sprite, Camera):
             self.speedy *= -1
             self.speedx *= -1
 
-
-
+    def update(self, *args, **kwargs):
+        self.move()
+        self.collide()
 
 
 class Axe(pygame.sprite.Sprite):
